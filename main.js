@@ -45,14 +45,14 @@ function computerThinks() {
 
 function saveResults(result){
     switch(result) {
-        case 'You win':
+        case 'You win.':
             score.wins += 1;
             break;
-        case 'You lose':
-            score.loses += 1;
+        case 'You lose.':
+            score.losses += 1;
             break;
-        case 'Tie':
-            score.tie += 1;
+        case 'Tie.':
+            score.ties += 1;
         default:
             'There has been an error in the game.';
     }
