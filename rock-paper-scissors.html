@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,19 @@
 
     <title>Rock, Paper, Scissors</title>
 </head>
+
 <body>
     <h1>Rock, Paper, Scissors</h1>
     <button class="gray-btn" id="rock">Rock</button>
     <button class="gray-btn" id="paper">Paper</button>
     <button class="gray-btn" id="scissors">Scissors</button>
+    <button class="gray-btn" id="reset-score" onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+    ">Reset Score</button>
     <script src="main.js"></script>
 </body>
+
 </html>

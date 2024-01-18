@@ -1,9 +1,15 @@
 /* Objects: Wins, Losses, and Ties counters */
-let score = {
-    wins: 0,
-    losses: 0,
-    ties: 0
+let score = JSON.parse(localStorage.getItem('score'));
+
+if (!score) {
+    score = {
+        wins: 0,
+        losses: 0,
+        ties: 0
+    }
 };
+
+console.log(JSON.parse(localStorage.getItem('score')));
 /*
 Lets the user throw a rock, paper, or scissor depending on which button they click.
 Lets computer compete against the user by randomly choosing rock, paper, or scissors
@@ -56,5 +62,7 @@ function saveResults(result){
         default:
             'There has been an error in the game.';
     }
+
+    localStorage.setItem('score', JSON.stringify(score));
 }
 
