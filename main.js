@@ -8,6 +8,10 @@ if (!score) {
         ties: 0
     }
 };
+document.getElementById('wins').innerHTML = "Wins: " + score.wins;
+document.getElementById('losses').innerHTML = "Losses: "+ score.losses;
+document.getElementById('ties').innerHTML = "Ties "+ score.ties;
+
 
 console.log(JSON.parse(localStorage.getItem('score')));
 /*
@@ -65,4 +69,5 @@ function saveResults(result){
 
     localStorage.setItem('score', JSON.stringify(score));
 }
+
 
