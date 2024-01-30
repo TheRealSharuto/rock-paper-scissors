@@ -4,31 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/styles.css">
-    <link rel="stylesheet" href="src/styles/tailwind.css">
+    <link rel="stylesheet" href="public/styles.css">
 
     <title>Rock, Paper, Scissors</title>
 </head>
 
-<body>
-    <h1>Rock, Paper, Scissors</h1>
-    <button class="gray-btn" id="rock">Rock</button>
-    <button class="gray-btn" id="paper">Paper</button>
-    <button class="gray-btn" id="scissors">Scissors</button>
-    <button class="gray-btn" id="reset-score" onclick="
-        score.wins = 0;
-        score.losses = 0;
-        score.ties = 0;
-        localStorage.removeItem('score');
-    ">Reset Score</button>
+<body class="mx-10">
+    <div class="page-container mx-10">
+        <header class="text-center flex justify-center">
+            <h1 class="gameTitle text-center">Rock, Paper, Scissors</h1>
+        </header>
 
-    <div>
-        <h2>Scores</h2>
-        <p id="wins">Wins: </p>
-        <p id="losses">Losses: </p>
-        <p id="ties">Ties: </p>
+        <div class="play-section py-10 flex justify-center px-10 text-center">
+            <div class="mx-10">
+                <button class="gray-btn" id="rock">Rock</button>
+            </div>
+            <div class="mx-10">
+                <button class="gray-btn" id="paper">Paper</button>
+            </div>
+            <div class="mx-10">
+                <button class="gray-btn" id="scissors">Scissors</button>
+            </div>
+        </div>
+        <div class="hands grid grid-cols-3 gap-2">
+            <div class="col-auto">
+                <h2>You: </h2>
+                <img src="src/thonk.webp" alt="thinking emoji with glasses" class="max-w-xs" id="player">
+                <!-- PLAYER PLAY PICTURES -->
+                <img src="src/player-rock.webp" id="player-rock" alt="" class="max-w-xs">
+                <img src="src/player-paper.webp" id="player-paper" alt="" class="max-w-xs">
+                <img src="src/scissors.webp" id="player-scissors" alt="" class="max-w-xs">
+
+            </div>
+            <div class="col-auto">
+                <h2 id="winResult" style="display: none;">YOU WIN</h2>
+                <h2 id="loseResult" style="display: none;">YOU LOSE</h2>
+                <h2 id="tieResult" style="display: none;">How boring... it's a tie.</h2>
+            </div>
+            <div class="col-auto">
+                <h2>Them &#x1f440;</h2>
+                <img src="src/computer.png" alt="computer arch nemisis" class="max-w-xs" id="enemy">
+                
+                <!-- COMPUTER PLAY PICTURES -->
+                <img src="src/computer-rock.webp" id="computer-rock" alt="" class="max-w-xs">
+                <img src="src/computer-paper.webp" id="computer-paper" alt="" class="max-w-xs">
+                <img src="src/scissors.webp" id="computer-scissors" alt="" class="max-w-xs">
+            </div>
+        </div>
+        <div class="resetSection mx-10 justify-center container-sm text-center my-5">
+            <button class="gray-btn" id="reset-score">Reset Score</button>
+        </div>
+
+        <div class="text-center my-5">
+            <h2>Scores</h2>
+            <p id="wins">Wins: </p>
+            <p id="losses">Losses: </p>
+            <p id="ties">Ties: </p>
+        </div>
+
+        <script src="main.js"></script>
     </div>
-    <script src="main.js"></script>
 </body>
 
 </html>

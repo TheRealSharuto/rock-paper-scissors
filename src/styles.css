@@ -2,6 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* FONT STYLING */
+@font-face {
+    font-family: manaspace;
+    src: url('/src/styles/fonts/manaspace-kit/ManaspaceReg.eot');
+    src: url('/src/styles/fonts/manaspace-kit/ManaspaceReg.ttf') format('truetype'), url('/src/styles/fonts/manaspace-kit/ManaspaceReg.woff') format('woff'), url('/src/styles/fonts/manaspace-kit/ManaspaceReg.woff2') format('woff'), url('/src/styles/fonts/manaspace-kit/ManaspaceReg.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: monospace;
+}
+
+h1,
+.gameTitle {
+    font-family: 'manaspace', Arial;
+    font-size: 50px;
+}
+
+h2 {
+    font-family: 'manaspace', Arial;
+    font-size: 45px;
+}
+
+header {
+    margin: auto 0;
+}
+
+
 .gray-btn {
     @apply bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full;
+}
+
+.play-section {
+    width: 600px;
+    margin: auto;
+}
+
+.hands {
+    justify-items: center;
+}
+
+#computer-rock,
+#computer-scissors,
+#computer-paper,
+#player-rock,
+#player-paper,
+#player-scissors {
+    display: none;
 }

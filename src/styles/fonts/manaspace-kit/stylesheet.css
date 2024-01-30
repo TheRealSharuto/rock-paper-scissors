@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Manaspace';
+    src: url('ManaspaceReg.eot');
+    src: url('ManaspaceReg.eot?#iefix') format('embedded-opentype'),
+        url('ManaspaceReg.woff2') format('woff2'),
+        url('ManaspaceReg.woff') format('woff'),
+        url('ManaspaceReg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
